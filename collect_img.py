@@ -5,8 +5,9 @@ import mediapipe as mp
 DATA_DIR = './data'
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
-
-classes = [chr(i) for i in range(65, 91)]  # ['A', 'B', 'C', ..., 'Z']
+ 
+number_of_classes = 27
+classes = [chr(i) for i in range(65, 91)] + ['SPACE']
 dataset_size = 100
 
 mp_hands = mp.solutions.hands
